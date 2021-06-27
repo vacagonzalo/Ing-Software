@@ -2,12 +2,50 @@
 
 \section{Interfaces externas}
 
+\begin{itemize}
+	\item El software deberá comunicarse por USB con el debugger [SISE-RS-0001-REQ0001].
+	\item El software deberá comunicarse por protocolo SERIAL con el microcontrolador SAMV71 [SISE-RS-0001-REQ0002].
+\end{itemize}
+
 \section{Funciones}
+
+\begin{enumerate}
+	\item Inyección de soft-errors:
+		\begin{itemize}
+			\item Deberá realizar escrituras de 32 bits en la memoria ram [SISE-RS-0001-REQ0003].
+			\item Deberá realizar bit-flips en la memoria ram [SISE-RS-0001-REQ0004].
+			\item Deberá realizar escrituras en los registros internos respetando su tamaño en bits [SISE-RS-0001-REQ0005].
+			\item Deberá realizar bit-flips en los registros internos respetando su tamaño en bits [SISE-RS-0001-REQ0006].
+		\end{itemize}
+	\item Recepción de reportes:
+		\begin{itemize}
+			\item Deberá recibir los reportes de estado [SISE-RS-0001-REQ0007].
+			\item Deberá relacionar los reportes de estado con la última inyección de soft-error introducida [SISE-RS-0001-REQ0008].
+		\end{itemize}
+	\item Almacenamiento de reportes:
+		\begin{itemize}
+			\item Deberá indicar el tiempo transcurrido desde la inyección de soft-error que la precede [SISE-RS-0001-REQ0009].
+			\item Deberá generar histogramas para su análisis estadístico [SISE-RS-0001-REQ0010].
+		\end{itemize}
+\end{enumerate}
 
 \section{Requisitos de rendimiento}
 
+El inyector de soft-errors deberá realizar la inserción solicitada en un tiempo menor a 10 ms [SISE-RS-0001-REQ0011].
+
 \section{Restricciones de diseño}
+
+Se utilizará el microcontrolador SAMV71 como dispositivo principal [SISE-RS-0001-REQ0012].
 
 \section{Atributos del sistema}
 
+\begin{enumerate}
+	\item Mantenibilidad:
+		\begin{itemize}
+			\item El software deberá permitir su modificación para trabajar con otras arquitecturas [SISE-RS-0001-REQ0013].
+		\end{itemize}
+\end{enumerate}
+
 \section{Otros requisitos}
+
+N/A.

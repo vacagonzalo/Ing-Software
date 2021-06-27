@@ -4,24 +4,22 @@
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{graphicx}
 \hypersetup{
-    bookmarks=false,    % show bookmarks bar?
-    pdftitle={Software Requirement Specification},    % title
-    pdfauthor={Jean-Philippe Eisenbarth},                     % author
-    pdfsubject={TeX and LaTeX},                        % subject of the document
-    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=black,       % color of internal links
-    citecolor=black,       % color of links to bibliography
-    filecolor=black,        % color of file links
-    urlcolor=black,        % color of external links
-    linktoc=page            % only page is linked
-}%
+    bookmarks=false,
+    pdftitle={Sistema de inyección de soft-errors},
+    pdfauthor={Gonzalo Nahuel Vaca},           
+    pdfsubject={Especificación de requerimientos de software},
+    pdfkeywords={SISE, soft-error, SAMV71},
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+    linktoc=page
+}
 \def\myversion{1.0 }
 \date{26/06/2021}
-%\title{%
-
-%}
 \usepackage{hyperref}
 \begin{document}
 
@@ -44,14 +42,18 @@
     \end{bfseries}
 \end{flushright}
 
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic} 
 \chapter*{Historial de cambios}
 
 \begin{center}
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-	    Versión & Fecha & Descripción & Autor\\
+	    Versión & Fecha & Descripción & Autor & Revisores\\
         \hline
-	    A & 27/06/2021 & Versión original & Gonzalo Nahuel Vaca\\
+	    A & 27/06/2021 & Versión original & G. Vaca & R. Cibils\\
         \hline
     \end{tabular}
 \end{center}
